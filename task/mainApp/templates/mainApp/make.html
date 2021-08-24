@@ -1,0 +1,17 @@
+{% extends 'mainApp/base.html' %}
+
+{% block one %}
+Создать таск
+{% endblock %}
+
+
+{% block two %}
+    <h1>Создать таск</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+{% endblock %}
+
